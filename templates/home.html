@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MovieDuniya/HomePage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Style1.css') }}">
+
+</head>
+
+
+<body id="space" style="font-family: 'Open Sans';">
+   
+
+  <div id="header" style="height: 80px; width:auto;background-color:#CD0A0A;">
+     
+    <div class="waviy" style="padding: 20px;text-shadow: 10px,10px;">
+      <span style="--i:1">M</span>
+      <span style="--i:2">o</span>
+      <span style="--i:3">v</span>
+      <span style="--i:4">i</span>
+      <span style="--i:5">e</span>
+      <span style="--i:6">s</span>
+      <span style="--i:7">H</span>
+      <span style="--i:8">u</span>
+      <span style="--i:9">b</span>
+   
+     </div>
+    </div>
+    <div id="header2">
+        <div style="padding:180px">
+        <h3 style="color:white;font-weight: lighter; ">Welcome to the World of </h4>
+        <h3 style="color:white; margin-left: 90px;font-weight: lighter;">Movies</h4>
+        <h5 style="color:white; margin-left:-100px; padding:20px;font-weight:lighter">Join Movies Hub to enjoy over 6000 hollywood movies</h5>
+       <a href="#footer"><button class="button-82-pushable" role="button" style="margin-left: 50px;">
+       <span class="button-82-shadow"></span>
+       <span class="button-82-edge"></span>
+       <span class="button-82-front text">
+          Lets Go!!!
+       </span>
+       </button></a>
+       </div>   
+       </div>
+<div id="start">
+    <div class="search-input"><center><div class="input-group mb-3" style="margin-top: 30px ; width: 60% ;  " >
+        <span class="input-group-text" id="basic-addon1"><img src="https://www.freeiconspng.com/uploads/search-icon-png-4.png"style="width: 35px;height: 35px;" ></span>
+        <input type="text" name="movie" class="movie form-control" id="autoComplete" placeholder="Enter Movie Name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required" >
+    </div></center>
+    
+    <center>        
+        <div class="button" id="button-7">
+        <div id="dub-arrow"><img src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true" alt="" /></div>
+        <a href="#">Search</a>
+      </div>
+    </center>
+    
+    <center>
+        <div class ="autocomplete_list" id="movie_list">
+            <ul><li>Ironman</li>
+            <li>Spiderman</li>
+            <li>Wanda</li>
+            <li>Wakanda</li>
+            <li>Super-Hero</li></ul>
+        </div>
+        </center>
+    </div></div>
+
+    <center><div class="fail_entry" style="font-weight: bold;color: #ffffff;display: none;"><h2>Oops!! This movie is not avaliable</h2></div></center>
+    
+    
+    <div id="buffer" class="text-center">
+    </div>
+
+  <div class="results">
+      <center><h1 id="'name" class="text-uppercase"></h1></center>
+  </div>
+
+  <div id="footer" style="width:100%;overflow:hidden">
+    <div id="text" style="background-color:#CD0A0A;height: 170px;padding: 30px;margin-left: 30px; width:50%;float:left;">
+      <h5 style="color: #ffff;">About Movies Hub...</h5>
+      <h6 style="color: #ffff;">Movies Hub presents a database of about 6000 hollywood movies of several genres  </h6>
+      <h6 style="color: #ffff;">ranging from thriller to comedy which you would enjoy over a mug of popcorn!!</h6>
+      <h6 style="color: #ffff;">It also has a recommendation engine which recommends you movies which might interest you.</h6></p>
+    </div>
+    <div style="margin-left:auto;background-color: #CD0A0A;height: 170px;"><a href="https://github.com/srushti-learner"><img style="width:50px;height:45px;margin-top: 75px;margin-left: 400px;" src="../static/Vector.png"></a>
+      <a href="https://www.linkedin.com/in/srushti-borate-b1000020a/"><img style="width:50px;height:50px;margin-top: 75px;margin-left: 30px;" src="../static/Vector2.png"></a></div>
+  </div>
+  <button  onclick="topFunction()" id="myBtn" ><img style=" width:50px;height:50px;" src="../static/image.png"></button>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='upScroll.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='script.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='action.js')}}"></script>
+
+</body>
+</html>
