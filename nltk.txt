@@ -1,1 +1,10 @@
-corpus
+chunkers
+grammars
+misc
+sentiment
+taggers
+corpora
+help
+models
+stemmers
+tokenizers.
