@@ -11,7 +11,7 @@ import pickle
 # load the nlp model and tfidf vectorizer from disk
 filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
-vectorizer = pickle.load(open('tranform.pkl','rb'))
+vectorizer = pickle.load(open('keywords.pkl','rb'))
 
 def get_title_index(df,index):
     return df[df.index == index]["movie_title"].values[0]
