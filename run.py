@@ -13,40 +13,34 @@ filename = 'nlp_model.pkl'
 clf = pickle.load(open(filename, 'rb'))
 vectorizer = pickle.load(open('keywords.pkl','rb'))
 
-#getting title from index of movie in dataset 
-def get_title_index(df,index):
-    return df[df.index == index]["movie_title"].values[0]
-
-#getting index from movie title from the database    
-def get_index_from_title(df,title):
-    return df[df.movie_title==title]["index"].values[0]
-
-#algorithm for finding similarity count-matrix
 def create_similarity():
-    df=pd.read_csv("data.csv")
-    cv=CountVectorizer()
-    count_matrix=cv.fit_transform(df["comb"])
-    cosine_sim=cosine_similarity(count_matrix)
-    return df,cosine_sim
+    data = pd.read_csv('data.csv')
+    # creating a count matrix
+    cv = CountVectorizer()
+    count_matrix = cv.fit_transform(data['comb'])
+    # creating a similarity score matrix
+    similarity = cosine_similarity(count_matrix)
+    return data,similarity
 
-#function for finding 20 recommendation movies to the given input
-def recommendations(m):
+def rcmd(m):
     m = m.lower()
-    df,cosine_sim=create_similarity()
-    if m not in df['movie_title'].unique():
+    try:
+        data.head()
+        similarity.shape
+    except:
+        data, similarity = create_similarity()
+    if m not in data['movie_title'].unique():
         return('Oops!! This movie is not avaliable')
     else:
-        l=[]
-        i=0
-        movie_index=get_index_from_title(df,m)
-        similar_movies=list(enumerate(cosine_sim[movie_index]))
-        sorted_similar_movies=sorted(similar_movies,key=lambda x:x[1],reverse=True)
-        for movie in sorted_similar_movies:
-            l.append(get_title_index(df,movie[0]))
-            i=i+1
-            if i>30:
-                break
-        return l    
+        i = data.loc[data['movie_title']==m].index[0]
+        lst = list(enumerate(similarity[i]))
+        lst = sorted(lst, key = lambda x:x[1] ,reverse=True)
+        lst = lst[1:21] # excluding first item since it is the requested movie itself
+        l = []
+        for i in range(len(lst)):
+            a = lst[i][0]
+            l.append(data['movie_title'][a])
+        return l
 
     
 # converting list of string to list (eg. "["abc","def"]" to ["abc","def"])
