@@ -44,7 +44,7 @@ def recommendations(m):
         for movie in sorted_similar_movies:
             l.append(get_title_index(df,movie[0]))
             i=i+1
-            if i>20:
+            if i>30:
                 break
         return l    
 
