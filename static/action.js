@@ -88,7 +88,7 @@ function get_movie_details(movie_id,my_api_key,arr,movie_title) {
     },
     error: function(){
       alert("API Error!");
-      $("#loader").delay(500).fadeOut();
+      $("#buffer").delay(500).fadeOut();
     },
   });
 }
