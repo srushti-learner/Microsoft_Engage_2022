@@ -22,7 +22,7 @@ def create_similarity():
     similarity = cosine_similarity(count_matrix)
     return data,similarity
 
-def rcmd(m):
+def recommendations(m):
     m = m.lower()
     try:
         data.head()
