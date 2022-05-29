@@ -12,4 +12,4 @@ How to run the project on local pc:
 
 3.Then run the file "run.py" and then paste the url "http://127.0.0.1:5000" on the browser.
 
-Link for detailed project report :https://drive.google.com/file/d/18lsWnqbatyqMQkTzw33-rtOkpmnYxJOB/view?usp=sharing
+Link for detailed project report :https://drive.google.com/file/d/19cAUhd1_dUSGi1FUR0KRHAdgFpq4qt5P/view?usp=sharing
